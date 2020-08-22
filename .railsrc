@@ -1,0 +1,5 @@
+-d=postgresql # PostgresDB
+--webpack=react # React FE
+-T # Skip TestUnit
+-B # Skip Bundle install command
+--template='./rails_template'

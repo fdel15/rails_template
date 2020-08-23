@@ -1,5 +1,5 @@
--d=postgresql            # PostgresDB
---webpack=react          # React FE
--T                       # Skip TestUnit
--B                       # Skip Bundle install command
---template ./template.rb # template to configure rails app
+-d=postgresql                           # PostgresDB
+--webpack=react                         # React FE
+-T                                      # Skip TestUnit
+-B                                      # Skip Bundle install command
+--template template.rb                  # template to configure rails app

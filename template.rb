@@ -13,6 +13,10 @@ def github_user
   ENV['GITHUB_USER']
 end
 
+def output_directory
+  ENV['OUTPUT_DIRECTORY']
+end
+
 def github_url
   "https://#{github_user}:#{github_token}@github.com/#{github_user}/#{app_name}"
 end
@@ -100,3 +104,7 @@ run create_github_repo
 
 git remote: "add origin #{github_url}"
 git push: 'origin master -f'
+
+run "mv #{Dir.pwd} #{output_directory}" unless output_directory.nil?
+
+run "rmdir #{Dir.pwd}"
